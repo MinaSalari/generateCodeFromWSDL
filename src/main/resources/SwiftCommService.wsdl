@@ -1,0 +1,50 @@
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.kishware.com/swift/services" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://www.kishware.com/swift/services">
+<link type="text/css" rel="stylesheet" id="dark-mode-custom-link"/>
+<link type="text/css" rel="stylesheet" id="dark-mode-general-link"/>
+<style lang="en" type="text/css" id="dark-mode-custom-style"/>
+<style lang="en" type="text/css" id="dark-mode-native-style"/>
+<wsdl:types>
+<xsd:schema targetNamespace="http://www.kishware.com/swift/services/Imports">
+<xsd:import schemaLocation="http://tsn-atw-0052.tosanltd.com:4003/SwiftCommService.svc?xsd=xsd0" namespace="http://www.kishware.com/swift/services"/>
+<xsd:import schemaLocation="http://tsn-atw-0052.tosanltd.com:4003/SwiftCommService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+<xsd:import schemaLocation="http://tsn-atw-0052.tosanltd.com:4003/SwiftCommService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Tosan.CoreBanking.SWIFT.CommunicationService.Data"/>
+<xsd:import schemaLocation="http://tsn-atw-0052.tosanltd.com:4003/SwiftCommService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Tosan.CoreBanking.SWIFT.Agent.Data.Swift"/>
+<xsd:import schemaLocation="http://tsn-atw-0052.tosanltd.com:4003/SwiftCommService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Tosan.CoreBanking.SWIFT.Agent.Data"/>
+<xsd:import schemaLocation="http://tsn-atw-0052.tosanltd.com:4003/SwiftCommService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Tosan.Core.OrgFundamental.Agent.Data"/>
+<xsd:import schemaLocation="http://tsn-atw-0052.tosanltd.com:4003/SwiftCommService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Tosan.Framework.Objects"/>
+<xsd:import schemaLocation="http://tsn-atw-0052.tosanltd.com:4003/SwiftCommService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Tosan.CoreBanking.SWIFT.Agent.Data.Sepam.SepamDataType"/>
+</xsd:schema>
+</wsdl:types>
+<wsdl:message name="ISwiftCommService_SendMT950_InputMessage">
+<wsdl:part name="parameters" element="tns:SendMT950"/>
+</wsdl:message>
+<wsdl:message name="ISwiftCommService_SendMT950_OutputMessage">
+<wsdl:part name="parameters" element="tns:SendMT950Response"/>
+</wsdl:message>
+<wsdl:message name="ISwiftCommService_SendMT900_InputMessage">
+<wsdl:part name="parameters" element="tns:SendMT900"/>
+</wsdl:message>
+<wsdl:message name="ISwiftCommService_SendMT900_OutputMessage">
+<wsdl:part name="parameters" element="tns:SendMT900Response"/>
+</wsdl:message>
+<wsdl:message name="ISwiftCommService_SendMT910_InputMessage">
+<wsdl:part name="parameters" element="tns:SendMT910"/>
+</wsdl:message>
+<wsdl:message name="ISwiftCommService_SendMT910_OutputMessage">
+<wsdl:part name="parameters" element="tns:SendMT910Response"/>
+</wsdl:message>
+<wsdl:portType name="ISwiftCommService">
+<wsdl:operation name="SendMT950">
+<wsdl:input wsaw:Action="http://www.kishware.com/swift/services/ISwiftCommService/SendMT950" message="tns:ISwiftCommService_SendMT950_InputMessage"/>
+<wsdl:output wsaw:Action="http://www.kishware.com/swift/services/ISwiftCommService/SendMT950Response" message="tns:ISwiftCommService_SendMT950_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="SendMT900">
+<wsdl:input wsaw:Action="http://www.kishware.com/swift/services/ISwiftCommService/SendMT900" message="tns:ISwiftCommService_SendMT900_InputMessage"/>
+<wsdl:output wsaw:Action="http://www.kishware.com/swift/services/ISwiftCommService/SendMT900Response" message="tns:ISwiftCommService_SendMT900_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="SendMT910">
+<wsdl:input wsaw:Action="http://www.kishware.com/swift/services/ISwiftCommService/SendMT910" message="tns:ISwiftCommService_SendMT910_InputMessage"/>
+<wsdl:output wsaw:Action="http://www.kishware.com/swift/services/ISwiftCommService/SendMT910Response" message="tns:ISwiftCommService_SendMT910_OutputMessage"/>
+</wsdl:operation>
+</wsdl:portType>
+</wsdl:definitions>

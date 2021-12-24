@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.mina</groupId>
+    <artifactId>generateCodeFromWSDL</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
+
+    <build>
+    <plugins>
+    <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>jaxb2-maven-plugin</artifactId>
+        <version>2.3.1</version>
+        <executions>
+            <execution>
+                <id>generate-sri-facturas</id>
+                <phase>generate-sources</phase>
+                <goals>
+                    <goal>xjc</goal>
+                </goals>
+            </execution>
+        </executions>
+        
+        <configuration>
+            <packageName>com.tosan.core.vostro.service.bl.swift</packageName>
+            <sourceType>wsdl</sourceType>
+            <sources>
+                <source>src/main/resources/SwiftCommService.wsdl</source>
+            </sources>
+            <outputDirectory>target/generated-sources/</outputDirectory>
+            <clearOutputDir>false</clearOutputDir>
+        </configuration>
+    </plugin>
+    </plugins>
+    </build>
+
+
+</project>
